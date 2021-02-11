@@ -1,5 +1,5 @@
 {
-  "name": "@kemitchell/markdown",
+  "name": "kemarkdown",
   "version": "0.0.0",
   "description": "Markdown to HTML renderer",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",

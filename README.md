@@ -1,5 +1,5 @@
 ```javascript
-const markdown = require('@kemitchell/markdown')
+const markdown = require('kemarkdown')
 const assert = require('assert')
 const spawnSync = require('child_process').spawnSync
 
