@@ -1,0 +1,24 @@
+{
+  "name": "@kemitchell/markdown",
+  "version": "0.0.0",
+  "description": "Markdown to HTML renderer",
+  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "repository": "kemitchell/markdown.js",
+  "license": "BlueOak-1.0.0",
+  "bin": "./bin.js",
+  "files": [
+    "index.js",
+    "bin.js"
+  ],
+  "dependencies": {
+    "remarkable": "^2.0.1",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "defence-cli": "^3.0.1",
+    "replace-require-self": "^1.1.1"
+  },
+  "scripts": {
+    "test": "defence -i javascript README.md | replace-require-self | node"
+  }
+}
