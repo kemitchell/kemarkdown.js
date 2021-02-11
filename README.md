@@ -1,7 +1,10 @@
+# kemarkdown
+
+## Node.js Module
+
 ```javascript
 const markdown = require('kemarkdown')
 const assert = require('assert')
-const spawnSync = require('child_process').spawnSync
 
 assert.strictEqual(
   markdown('this is a _test_'),
@@ -44,6 +47,12 @@ assert.strictEqual(
   '<p>this is a <em>test</em></p>\n',
   'unsafe option'
 )
+```
+
+## Command Line Interface
+
+```javascript
+const spawnSync = require('child_process').spawnSync
 
 assert.strictEqual(
   spawnSync('./bin.js', {
