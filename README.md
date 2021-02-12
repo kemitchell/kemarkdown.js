@@ -10,50 +10,42 @@ const assert = require('assert')
 
 assert.strictEqual(
   markdown('this is a _test_'),
-  '<p>this is a <em>test</em></p>\n',
-  'basic rendering'
+  '<p>this is a <em>test</em></p>\n'
 )
 
 assert.strictEqual(
   markdown('this could\'ve failed'),
-  '<p>this could’ve failed</p>\n',
-  'smart quotes'
+  '<p>this could’ve failed</p>\n'
 )
 
 assert.strictEqual(
   markdown('this could\'ve failed', { dumb: true }),
-  '<p>this could\'ve failed</p>\n',
-  'dumb quotes option'
+  '<p>this could\'ve failed</p>\n'
 )
 
 assert.strictEqual(
   markdown('# Test'),
-  '<h1 id="test">Test</h1>\n',
-  'heading IDs'
+  '<h1 id="test">Test</h1>\n'
 )
 
 assert.strictEqual(
   markdown('# Test', { noIDs: true }),
-  '<h1>Test</h1>\n',
-  'no IDs option'
+  '<h1>Test</h1>\n'
 )
 
 assert.strictEqual(
   markdown('# Test', { slugger: text => 'TEST' }),
-  '<h1 id="TEST">Test</h1>\n',
-  'custom slugger'
+  '<h1 id="TEST">Test</h1>\n'
 )
 
 assert.strictEqual(
   markdown('this is a <em>test</em>'),
-  '<p>this is a &lt;em&gt;test&lt;/em&gt;</p>\n',
-  'safe by default'
+  '<p>this is a &lt;em&gt;test&lt;/em&gt;</p>\n'
 )
 
 assert.strictEqual(
   markdown('this is a <em>test</em>', { unsafe: true }),
-  '<p>this is a <em>test</em></p>\n',
-  'unsafe option'
+  '<p>this is a <em>test</em></p>\n'
 )
 ```
 
@@ -66,23 +58,20 @@ assert.strictEqual(
   spawnSync('./bin.js', {
     input: 'this is a test'
   }).stdout.toString(),
-  '<p>this is a test</p>\n',
-  'CLI'
+  '<p>this is a test</p>\n'
 )
 
 assert.strictEqual(
   spawnSync('./bin.js', ['--unsafe'], {
     input: 'this is a <em>test</em>'
   }).stdout.toString(),
-  '<p>this is a <em>test</em></p>\n',
-  'CLI --unsafe'
+  '<p>this is a <em>test</em></p>\n'
 )
 
 assert.strictEqual(
   spawnSync('./bin.js', ['--noids'], {
     input: '# Test'
   }).stdout.toString(),
-  '<h1>Test</h1>\n',
-  'CLI --noids'
+  '<h1>Test</h1>\n'
 )
 ```
