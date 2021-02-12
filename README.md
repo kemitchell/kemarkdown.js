@@ -51,6 +51,8 @@ assert.strictEqual(
 
 ## Command Line Interface
 
+`npm i -g kemarkdown ; kemarkdown --help` or `npx kemarkdown --help`
+
 ```javascript
 const spawnSync = require('child_process').spawnSync
 
