@@ -4,6 +4,8 @@ Markdown to HTML renderer
 
 ## Node.js Module
 
+`kemarkdown(markup, { dumb, unsafe, noIDs, slugger })`
+
 ```javascript
 const markdown = require('kemarkdown')
 const assert = require('assert')
