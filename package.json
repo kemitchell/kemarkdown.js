@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Markdown to HTML renderer",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
-  "repository": "kemitchell/markdown.js",
+  "repository": "kemitchell/kemarkdown.js",
   "license": "BlueOak-1.0.0",
   "bin": "./bin.js",
   "files": [
