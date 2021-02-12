@@ -30,7 +30,10 @@ module.exports = (markup, options = {}) => {
 function defaultSlugger (text) {
   return text
     .toLowerCase()
+    // Replace all spaces with dashes.
     .replace(/ /g, '-')
+    // Collapse runs of dashes.
     .replace(/-+/g, '-')
+    // Delete non-ASCII-word characters.
     .replace(/[^a-z0-9-]/g, '')
 }
