@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const options = require('yargs/yargs')(process.argv.slice(1))
+const options = require('yargs/yargs')(require('yargs/helpers').hideBin(process.argv))
   .scriptName('kemarkdown')
   .usage('Usage: $0 [--dumb] [--unsafe] [--noids]')
   .example('$0 < file.md > file.html', 'convert a Markdown file to HTML')
