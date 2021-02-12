@@ -1,11 +1,13 @@
 {
   "name": "kemarkdown",
-  "version": "0.0.0",
+  "version": "1.1.1",
   "description": "Markdown to HTML renderer",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "repository": "kemitchell/kemarkdown.js",
   "license": "BlueOak-1.0.0",
-  "bin": "./bin.js",
+  "bin": {
+    "kemarkdown": "bin.js"
+  },
   "files": [
     "index.js",
     "bin.js"
