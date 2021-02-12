@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-const options = require('yargs')
-  .scriptName('@kemitchell/markdown')
+const options = require('yargs/yargs')(process.argv.slice(1))
+  .scriptName('kemarkdown')
+  .usage('Usage: $0 [--dumb] [--unsafe] [--noids]')
+  .example('$0 < file.md > file.html', 'convert a Markdown file to HTML')
   .option('d', {
     alias: 'dumb',
     describe: 'dumb punctuation',
@@ -22,7 +24,7 @@ const options = require('yargs')
   .version()
   .help()
   .alias('h', 'help')
-  .parse(process.argv)
+  .argv
 
 const markdown = require('./')
 const chunks = []
