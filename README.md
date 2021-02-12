@@ -71,6 +71,13 @@ assert.strictEqual(
 )
 
 assert.strictEqual(
+  spawnSync('./bin.js', ['--dumb'], {
+    input: 'this isn\'t complicated'
+  }).stdout.toString(),
+  '<p>this isn\'t complicated</p>\n'
+)
+
+assert.strictEqual(
   spawnSync('./bin.js', ['--noids'], {
     input: '# Test'
   }).stdout.toString(),
