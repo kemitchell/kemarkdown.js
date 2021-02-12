@@ -24,6 +24,6 @@
   },
   "scripts": {
     "test": "defence -i javascript README.md | replace-require-self | node",
-    "lint": "standard ; standard-markdown README.md"
+    "lint": "standard && standard-markdown README.md"
   }
 }
