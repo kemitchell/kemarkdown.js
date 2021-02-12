@@ -4,6 +4,9 @@ module.exports = (markup, options = {}) => {
   if (typeof markup !== 'string') {
     throw new Error('markup argument not a string')
   }
+  if (typeof options !== 'object') {
+    throw new Error('options argument not an object')
+  }
   const {
     unsafe = false,
     dumb = false,
