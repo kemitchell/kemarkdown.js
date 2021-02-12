@@ -1,5 +1,7 @@
 # kemarkdown
 
+Markdown to HTML renderer
+
 ## Node.js Module
 
 ```javascript
