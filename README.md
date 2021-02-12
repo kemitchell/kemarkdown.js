@@ -37,6 +37,12 @@ assert.strictEqual(
 )
 
 assert.strictEqual(
+  markdown('# Test', { slugger: text => 'TEST' }),
+  '<h1 id="TEST">Test</h1>\n',
+  'custom slugger'
+)
+
+assert.strictEqual(
   markdown('this is a <em>test</em>'),
   '<p>this is a &lt;em&gt;test&lt;/em&gt;</p>\n',
   'safe by default'
