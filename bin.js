@@ -25,6 +25,7 @@ const options = require('yargs/yargs')(require('yargs/helpers').hideBin(process.
   .alias('v', 'version')
   .help()
   .alias('h', 'help')
+  .strict()
   .argv
 
 const markdown = require('./')
