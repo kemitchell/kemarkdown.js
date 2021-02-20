@@ -22,6 +22,7 @@ const options = require('yargs/yargs')(require('yargs/helpers').hideBin(process.
     default: false
   })
   .version()
+  .alias('v', 'version')
   .help()
   .alias('h', 'help')
   .argv
