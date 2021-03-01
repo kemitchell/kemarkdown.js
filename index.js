@@ -1,18 +1,17 @@
 const Remarkable = require('remarkable').Remarkable
 
-module.exports = (markup, options = {}) => {
+module.exports = (markup, {
+  unsafe = false,
+  dumb = false,
+  noIDs = false,
+  slugger = defaultSlugger
+} = {}) => {
   if (typeof markup !== 'string') {
     throw new Error('markup argument not a string')
   }
-  if (typeof options !== 'object') {
-    throw new Error('options argument not an object')
+  if (typeof slugger !== 'function') {
+    throw new Error('slugger option not a function')
   }
-  const {
-    unsafe = false,
-    dumb = false,
-    noIDs = false,
-    slugger = defaultSlugger
-  } = options
   const parser = new Remarkable({
     html: unsafe,
     typographer: !dumb
