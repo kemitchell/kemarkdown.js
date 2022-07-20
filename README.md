@@ -46,6 +46,16 @@ assert.strictEqual(
 )
 
 assert.strictEqual(
+  markdown('highlight ==some== text'),
+  '<p>highlight <mark>some</mark> text</p>\n'
+)
+
+assert.strictEqual(
+  markdown('We ~~am~~++are++ the champions.'),
+  '<p>We <del>am</del><ins>are</ins> the champions.</p>\n'
+)
+
+assert.strictEqual(
   markdown('this is a <em>test</em>', { unsafe: true }),
   '<p>this is a <em>test</em></p>\n'
 )
