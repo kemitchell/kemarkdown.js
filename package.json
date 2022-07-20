@@ -1,6 +1,6 @@
 {
   "name": "kemarkdown",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Markdown to HTML renderer",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "repository": "kemitchell/kemarkdown.js",
