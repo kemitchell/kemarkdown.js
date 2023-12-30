@@ -59,6 +59,16 @@ assert.strictEqual(
   markdown('this is a <em>test</em>', { unsafe: true }),
   '<p>this is a <em>test</em></p>\n'
 )
+
+assert.strictEqual(
+  markdown('do not replace with (c) copyright symbol', { unsafe: true }),
+  '<p>do not replace with (c) copyright symbol</p>\n'
+)
+
+assert.strictEqual(
+  markdown('do not replace with --- em dash', { unsafe: true }),
+  '<p>do not replace with --- em dash</p>\n'
+)
 ```
 
 ## Command Line Interface

@@ -16,6 +16,7 @@ module.exports = (markup, {
     html: unsafe,
     typographer: !dumb
   })
+  parser.core.ruler.disable(['replacements'])
   parser.inline.ruler.enable(['ins', 'del', 'mark'])
   if (!noIDs) {
     parser.use(remarkable => {
