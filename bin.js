@@ -1,5 +1,10 @@
 #!/usr/bin/env node
-const options = require('yargs/yargs')(require('yargs/helpers').hideBin(process.argv))
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
+
+import markdown from './index.js'
+
+const options = yargs()
   .scriptName('kemarkdown')
   .usage('Usage: $0 [--dumb] [--unsafe] [--noids]')
   .example('$0 < file.md > file.html', 'convert a Markdown file to HTML')
@@ -26,9 +31,8 @@ const options = require('yargs/yargs')(require('yargs/helpers').hideBin(process.
   .help()
   .alias('h', 'help')
   .strict()
-  .argv
+  .parse(hideBin(process.argv))
 
-const markdown = require('./')
 const chunks = []
 process.stdin
   .on('data', chunk => { chunks.push(chunk) })

@@ -7,8 +7,9 @@ Markdown to HTML renderer
 `kemarkdown(markup, { dumb, unsafe, noIDs, slugger })`
 
 ```javascript
-const markdown = require('kemarkdown')
-const assert = require('assert')
+import markdown from 'kemarkdown'
+import assert from 'node:assert'
+import { spawnSync } from 'node:child_process'
 
 assert.strictEqual(
   markdown('this is a _test_'),
@@ -76,8 +77,6 @@ assert.strictEqual(
 `npm i -g kemarkdown ; kemarkdown --help` or `npx kemarkdown --help`
 
 ```javascript
-const spawnSync = require('child_process').spawnSync
-
 assert.strictEqual(
   spawnSync('./bin.js', {
     input: 'this is a test'

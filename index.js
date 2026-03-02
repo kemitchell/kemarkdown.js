@@ -1,6 +1,6 @@
-const Remarkable = require('remarkable').Remarkable
+import { Remarkable } from 'remarkable'
 
-module.exports = (markup, {
+export default (markup, {
   unsafe = false,
   dumb = false,
   noIDs = false,
