@@ -15,7 +15,7 @@
   ],
   "dependencies": {
     "remarkable": "^2.0.1",
-    "yargs": "^17.0.1"
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "defence-cli": "^3.0.1",
