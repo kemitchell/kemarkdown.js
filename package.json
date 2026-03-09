@@ -2,7 +2,7 @@
   "type": "module",
   "main": "index.js",
   "name": "kemarkdown",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Markdown to HTML renderer",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "repository": "kemitchell/kemarkdown.js",
